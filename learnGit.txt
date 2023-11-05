@@ -1,3 +1,19 @@
 git init //将当前目录初始化
 git status //显示当前目录下 修改过的 或 untracked 文件
 git add . //将当前目录下的文件全部track起来，也可改成相应文件名
+
+git commit -m "Added index1.html and learnGit.txt" -m "some description"
+//commit v. 记下 本次修改的原因
+
+git push origin master
+//需要用ssh origin是根目录
+git remote add origin git@github.com:zhangbw20/demo-repo.git
+//廖雪峰说这样用
+
+git remote set-url origin https://github.com/zhangbw20/demo-repo.git
+git push -u origin master
+//最后反正这样起效了 -u means upstream
+
+//以后就只需要用 git push origin master 就行了 
+//origin的意思是location of git repository
+//master是我们希望push to的branch
